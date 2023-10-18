@@ -27,8 +27,8 @@ class RegisteredUserController extends Controller
 
     /**
      * Handle an incoming registration request.
-     * Nama     : Davin Wahyu Wardana
-     * NIM      : 6706223003
+     * Nama     : Davi Pramudya Putra
+     * NIM      : 6706223154
      * Kelas    : 4603
      * @throws \Illuminate\Validation\ValidationException
      */

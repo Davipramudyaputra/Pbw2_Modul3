@@ -67,7 +67,7 @@
             <x-input-error :messages="$errors->get('phoneNumber')" class="mt-2" />
         </div>
 
-        <!-- Religion    6706223102_Muh. Fadhil Bayhaqi_46-03 -->
+        <!-- Religion    6706223154_Davi Pramudya Putra -->
         <div>
             <x-input-label for="agama" :value="__('Agama')" />
             <x-text-input id="agama" class="block mt-1 w-full" type="text" name="agama" :value="old('agama')" required autocomplete="agama" />

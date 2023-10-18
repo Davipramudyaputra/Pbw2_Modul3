@@ -4,16 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\DataTables\UserDataTable;
 
 class UserController extends Controller
 {
-    public function index() {
-        $users = User::all();
-        return view('user.daftarPengguna', compact('users'));
+    // Nama    : Davi Pramudya Putra
+    // NIM     : 6706223154
+    // Kelas   : D3IF-4603
+    
+    // public function index() {
+    //     $users = User::all();
+    //     return view('user.daftarPengguna', compact('users'));
+    // }
+    public function index(UserDataTable $dataTable)
+    {
+        return $dataTable->render('user.daftarPengguna');
     }
 
-    public function showUser($id) {
-        $user = User::where('id', $id)->firstOrFail();
+    public function showUser($username) {
+        $user = User::where('username', $username)->firstOrFail();
         return view('user.infoPengguna', compact('user'));
     }
 

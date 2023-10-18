@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-
+// Nama  : Davi Pramudya Putra
+// NIM   : 6706223154
+// Kelas : D3IF-4603 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;

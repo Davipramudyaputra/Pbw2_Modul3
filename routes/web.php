@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Nama  : Davi Pramudya Putra
+// NIM   : 6706223154
+// Kelas : D3IF-4603 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -42,3 +46,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
