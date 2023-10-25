@@ -12,11 +12,13 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
+        /**
+         * The attributes that are mass assignable.
+         * @var array<int, string>
+         */
+    // Nama    : Davi Pramudya Putra
+    // NIM     : 6706223154
+    // Kelas   : D3IF-4603
     protected $fillable = [
         'username',
         'fullname',
@@ -46,5 +48,13 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'password' => 'hashed',
     ];
+
+    public function setPasswordAttribute($password)
+    {
+        if ($password) {
+            $this->attributes['password'] = bcrypt($password);
+        }
+    }
 }

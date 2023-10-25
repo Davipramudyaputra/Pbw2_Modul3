@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             //Davi pramudya putra
             //6706223154
-            $table->string('agama', 20);
+            $table->string('religion', 20);
             $table->tinyInteger('gender');
         });
     }

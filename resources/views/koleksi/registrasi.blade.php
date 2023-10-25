@@ -4,7 +4,12 @@
             {{ __('Tambah Koleksi') }}
         </h2>
     </x-slot>
-
+<!-- 
+Nama    : Davi Pramudya Putra
+NIM     : 6706223154
+Kelas   : D3IF-4603 
+-->
+@section('content')
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -14,11 +19,6 @@
                     {{ Session::get('success') }}
                 </div>
                 @endif
-<!-- 
-| Nama  : Davin Wahyu Wardana
-| NIM   : 6706223003
-| Kelas : D3IF-4603 
---> 
                     <form action="{{ route('koleksi.store') }}" method="POST">
                         @csrf
                         <!-- Nama Koleksi -->
@@ -32,9 +32,9 @@
                             <x-input-label for="jenisKoleksi" :value="__('Jenis Koleksi')" />
                             <select id="jenisKoleksi" name="jenisKoleksi" class="block mt-1 w-full" required autofocus>
                                 <option value="{{ old('jenisKoleksi') == '' ? '' : old('jenisKoleksi') }}" {{ old('jenisKoleksi') == '' ? 'selected' : '' }}>{{ old('jenisKoleksi') == '' ? 'Select one...' :  (old('jenisKoleksi') == 1 ? 'Buku (Selected)' : (old('jenisKoleksi') == 2 ? 'Majalah (Selected)' : 'Cakram Digital (Selected)')) }}</option>
+                                <option value="1">Buku</option>
                                 <option value="2">Majalah</option>
                                 <option value="3">Cakram Digital</option>
-                                <option value="1">Buku</option>
                             </select>
                             <x-input-error :messages="$errors->get('jenisKoleksi')" class="mt-2" />
                         </div><br>
@@ -60,4 +60,5 @@
             window.history.back();
         }
     </script>
+@endsection
 </x-app-layout>
